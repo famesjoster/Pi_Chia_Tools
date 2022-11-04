@@ -8,7 +8,7 @@ if [[ $(pgrep -c chia) -gt 1 ]]; then
         echo "chia stop -d all"
         echo "deactivate"
         echo "cd"
-        echo "chia-upgrade.sh"
+        echo "~/bin/chia-upgrade.sh"
         exit 1
 fi
 
@@ -28,4 +28,6 @@ sh install.sh
 chia init
 
 echo "DONE. JUST RUN:"
+echo "cd ~/chia-blockchain/"
+echo ". ./activate"
 echo "chia start farmer"
